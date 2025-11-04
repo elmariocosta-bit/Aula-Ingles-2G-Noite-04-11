@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Aula de Inglês – 2º Ano do Ensino Médio – 04/11 – Escola Maria Zilda</title>
+<style>
+  :root{--bg:#f6f8fb;--card:#fff;--primary:#0b63c6;--accent:#174a9b;--ok:#1f7a3a;--bad:#b91c1c;--muted:#55606a}
+  body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;padding:18px;color:#07203b}
+  .wrap{max-width:980px;margin:0 auto}
+  header{background:linear-gradient(90deg,var(--primary),#4b86b4);color:white;padding:18px;border-radius:8px}
+  header h1{margin:0;font-size:20px}
+  header p{margin:6px 0 0;font-size:13px;opacity:0.95}
+  .card{background:var(--card);padding:18px;border-radius:8px;margin-top:16px;box-shadow:0 8px 22px rgba(8,24,40,0.06)}
+  .eng{font-weight:600;color:#0b3b6b;margin:10px 0 0}
+  .pt{color:var(--muted);margin:6px 0 14px;font-style:italic}
+  label.inputrow{display:block;margin:8px 0;font-weight:700}
+  input[type="text"]{width:100%;padding:10px;border-radius:6px;border:1px solid #d6dbe5;font-size:15px}
+  .question{padding:12px;border-radius:8px;border:1px solid #eef4ff;margin-bottom:12px;background:#fff}
+  .qtitle{font-weight:700;margin-bottom:6px}
+  .qtrans{color:var(--muted);font-style:italic;margin-bottom:8px}
+  .options label{display:block;padding:8px;border-radius:6px;cursor:pointer;border:1px solid transparent;margin-bottom:6px}
+  .options input{margin-right:10px}
+  .controls{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+  button{background:var(--primary);color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+  button.secondary{background:#eef6ff;color:var(--accent);border:1px solid #cfe2ff}
+  .result{margin-top:14px;padding:12px;border-radius:8px}
+  .correct{background:#ecfbef;border:1px solid rgba(31,122,58,0.12)}
+  .wrong{background:#fff6f6;border:1px solid rgba(185,28,28,0.12)}
+  .small{font-size:13px;color:var(--muted)}
+  .download{background:#0a8a5f}
+  footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+  @media (max-width:640px){header h1{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Aula de Inglês – 2º Ano do Ensino Médio – 04/11 – Escola Maria Zilda</h1>
+    <p>Reading & Grammar: The Uberization of Work — Texto em inglês com tradução e 30 questões.</p>
+  </header>
+
+  <div class="card" id="reading">
+    <h2 style="color:var(--accent);margin-top:0">Reading text / Texto</h2>
+
+    <p class="eng">The gig economy is transforming work as we know it. Experts predict that, by 2030, traditional 9-to-5 jobs will have become much less common.</p>
+    <p class="pt">A economia de bicos (gig economy) está transformando o trabalho como o conhecemos. Especialistas preveem que, até 2030, empregos tradicionais das 9h às 17h terão se tornado muito menos comuns.</p>
+
+    <p class="eng">Flexible gig work through apps offers freedom and flexibility, but it also brings challenges: workers often do not receive traditional benefits and their income can be unstable.</p>
+    <p class="pt">O trabalho flexível através de aplicativos oferece liberdade e flexibilidade, mas também traz desafios: os trabalhadores muitas vezes não recebem benefícios tradicionais e sua renda pode ser instável.</p>
+
+    <p class="eng">Teenagers entering the workforce should understand both sides. While gig work allows you to be your own boss, it requires discipline and planning.</p>
+    <p class="pt">Adolescentes que ingressam no mercado de trabalho devem entender os dois lados. Embora o trabalho por aplicativo permita que você seja seu próprio chefe, ele exige disciplina e planejamento.</p>
+
+    <p class="eng">You'll need to manage your own taxes, save for retirement, and constantly upgrade your skills to stay competitive.</p>
+    <p class="pt">Você precisará gerenciar seus próprios impostos, poupar para a aposentadoria e atualizar constantemente suas habilidades para permanecer competitivo.</p>
+
+    <p class="eng">Many professionals chose freelancing after years in traditional jobs. By the time they made the switch, some had realized that office life didn’t match their ambitions.</p>
+    <p class="pt">Muitos profissionais escolheram o trabalho freelancer após anos em empregos tradicionais. Quando fizeram a mudança, alguns já haviam percebido que a vida no escritório não combinava com suas ambições.</p>
+
+    <p class="eng">Freelancing came with challenges—finding clients, setting rates, and managing irregular income. Those who succeeded planned ahead; for example, some saved several months of expenses before quitting.</p>
+    <p class="pt">O trabalho freelancer trouxe desafios — encontrar clientes, estabelecer preços e lidar com renda irregular. Aqueles que tiveram sucesso planejaram com antecedência; por exemplo, alguns economizaram vários meses de despesas antes de se desligar do emprego.</p>
+
+    <p class="eng">While the path wasn’t easy, many agreed it was worth it: they traded stability for freedom and, by the end of the first year, few looked back.</p>
+    <p class="pt">Embora o caminho não tenha sido fácil, muitos concordaram que valeu a pena: eles trocaram estabilidade por liberdade e, ao final do primeiro ano, poucos se arrependeram.</p>
+  </div>
+
+  <div class="card" id="quiz">
+    <label class="inputrow">Student full name / Nome completo do aluno (obrigatório):
+      <input type="text" id="studentName" placeholder="Digite seu nome completo aqui">
+    </label>
+
+    <p class="small">Responda todas as questões e clique em <strong>Enviar / Corrigir</strong> ao final. As alternativas estão apenas em inglês.</p>
+
+    <!-- QUESTIONS: all in one page -->
+    <form id="quizForm">
+
+<!-- Question 1 -->
+<div class="question" id="q0">
+  <div class="qtitle">1. What does "gig work" refer to?</div>
+  <div class="qtrans">1. A que se refere "gig work"?</div>
+  <div class="options">
+    <label><input type="radio" name="q0" value="0"> A) Permanent office work</label>
+    <label><input type="radio" name="q0" value="1"> B) Work through apps like Uber or iFood</label>
+    <label><input type="radio" name="q0" value="2"> C) Government employment</label>
+    <label><input type="radio" name="q0" value="3"> D) Factory work</label>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="question" id="q1">
+  <div class="qtitle">2. According to experts, by 2030, traditional 9-to-5 jobs will be:</div>
+  <div class="qtrans">2. De acordo com especialistas, até 2030, empregos tradicionais das 9 às 17 serão:</div>
+  <div class="options">
+    <label><input type="radio" name="q1" value="0"> A) Much more common</label>
+    <label><input type="radio" name="q1" value="1"> B) Much less common</label>
+    <label><input type="radio" name="q1" value="2"> C) Exactly the same</label>
+    <label><input type="radio" name="q1" value="3"> D) More stable</label>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="question" id="q2">
+  <div class="qtitle">3. The phrase "be your own boss" means:</div>
+  <div class="qtrans">3. A expressão "be your own boss" significa:</div>
+  <div class="options">
+    <label><input type="radio" name="q2" value="0"> A) Be an employee</label>
+    <label><input type="radio" name="q2" value="1"> B) Work for the government</label>
+    <label><input type="radio" name="q2" value="2"> C) Be your own boss (work independently)</label>
+    <label><input type="radio" name="q2" value="3"> D) Work in a team</label>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="question" id="q3">
+  <div class="qtitle">4. Gig work requires discipline and:</div>
+  <div class="qtrans">4. O trabalho por aplicativo exige disciplina e:</div>
+  <div class="options">
+    <label><input type="radio" name="q3" value="0"> A) Laziness</label>
+    <label><input type="radio" name="q3" value="1"> B) Planning</label>
+    <label><input type="radio" name="q3" value="2"> C) Luck</label>
+    <label><input type="radio" name="q3" value="3"> D) Vacation</label>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="question" id="q4">
+  <div class="qtitle">5. In gig work, workers often have to manage their own:</div>
+  <div class="qtrans">5. No trabalho por aplicativo, os trabalhadores muitas vezes precisam gerenciar seus próprios:</div>
+  <div class="options">
+    <label><input type="radio" name="q4" value="0"> A) Taxes</label>
+    <label><input type="radio" name="q4" value="1"> B) Company meetings</label>
+    <label><input type="radio" name="q4" value="2"> C) Paid vacations</label>
+    <label><input type="radio" name="q4" value="3"> D) Employer benefits</label>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="question" id="q5">
+  <div class="qtitle">6. What does "retirement" mean?</div>
+  <div class="qtrans">6. O que significa "retirement"?</div>
+  <div class="options">
+    <label><input type="radio" name="q5" value="0"> A) Employment</label>
+    <label><input type="radio" name="q5" value="1"> B) Dismissal</label>
+    <label><input type="radio" name="q5" value="2"> C) Retirement</label>
+    <label><input type="radio" name="q5" value="3"> D) Promotion</label>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="question" id="q6">
+  <div class="qtitle">7. One advantage of gig work is:</div>
+  <div class="qtrans">7. Uma vantagem do trabalho por aplicativo é:</div>
+  <div class="options">
+    <label><input type="radio" name="q6" value="0"> A) High stability</label>
+    <label><input type="radio" name="q6" value="1"> B) Freedom and flexibility</label>
+    <label><input type="radio" name="q6" value="2"> C) Paid holidays</label>
+    <label><input type="radio" name="q6" value="3"> D) Employer benefits</label>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="question" id="q7">
+  <div class="qtitle">8. One disadvantage of gig work is:</div>
+  <div class="qtrans">8. Uma desvantagem do trabalho por aplicativo é:</div>
+  <div class="options">
+    <label><input type="radio" name="q7" value="0"> A) Flexibility</label>
+    <label><input type="radio" name="q7" value="1"> B) High pay</label>
+    <label><input type="radio" name="q7" value="2"> C) Lack of benefits</label>
+    <label><input type="radio" name="q7" value="3"> D) Teamwork</label>
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="question" id="q8">
+  <div class="qtitle">9. To succeed in the gig economy, workers should:</div>
+  <div class="qtrans">9. Para ter sucesso na gig economy, os trabalhadores devem:</div>
+  <div class="options">
+    <label><input type="radio" name="q8" value="0"> A) Ignore new skills</label>
+    <label><input type="radio" name="q8" value="1"> B) Develop in-demand skills</label>
+    <label><input type="radio" name="q8" value="2"> C) Depend on employers</label>
+    <label><input type="radio" name="q8" value="3"> D) Stop working</label>
+  </div>
+</div>
+
+<!-- 10 -->
+<div class="question" id="q9">
+  <div class="qtitle">10. The key for gig workers is to find:</div>
+  <div class="qtrans">10. A chave para trabalhadores por aplicativo é encontrar:</div>
+  <div class="options">
+    <label><input type="radio" name="q9" value="0"> A) Balance</label>
+    <label><input type="radio" name="q9" value="1"> B) More overtime</label>
+    <label><input type="radio" name="q9" value="2"> C) Less planning</label>
+    <label><input type="radio" name="q9" value="3"> D) Employer support</label>
+  </div>
+</div>
+
+<!-- 11 -->
+<div class="question" id="q10">
+  <div class="qtitle">11. What does "require" mean in the text?</div>
+  <div class="qtrans">11. O que significa "require" no texto?</div>
+  <div class="options">
+    <label><input type="radio" name="q10" value="0"> A) Permit</label>
+    <label><input type="radio" name="q10" value="1"> B) Demand / need</label>
+    <label><input type="radio" name="q10" value="2"> C) Help</label>
+    <label><input type="radio" name="q10" value="3"> D) Ignore</label>
+  </div>
+</div>
+
+<!-- 12 -->
+<div class="question" id="q11">
+  <div class="qtitle">12. What does "allow" mean?</div>
+  <div class="qtrans">12. O que significa "allow"?</div>
+  <div class="options">
+    <label><input type="radio" name="q11" value="0"> A) Allow / permit</label>
+    <label><input type="radio" name="q11" value="1"> B) Retire</label>
+    <label><input type="radio" name="q11" value="2"> C) Forget</label>
+    <label><input type="radio" name="q11" value="3"> D) Save</label>
+  </div>
+</div>
+
+<!-- 13 -->
+<div class="question" id="q12">
+  <div class="qtitle">13. Which sentence uses Past Perfect?</div>
+  <div class="qtrans">13. Qual sentença usa Past Perfect?</div>
+  <div class="options">
+    <label><input type="radio" name="q12" value="0"> A) They had realized that office life didn’t match their ambitions.</label>
+    <label><input type="radio" name="q12" value="1"> B) They realize now.</label>
+    <label><input type="radio" name="q12" value="2"> C) They will realize tomorrow.</label>
+    <label><input type="radio" name="q12" value="3"> D) They realized yesterday.</label>
+  </div>
+</div>
+
+<!-- 14 -->
+<div class="question" id="q13">
+  <div class="qtitle">14. Past Perfect is used to show:</div>
+  <div class="qtrans">14. Past Perfect é usado para mostrar:</div>
+  <div class="options">
+    <label><input type="radio" name="q13" value="0"> A) An action before another past action</label>
+    <label><input type="radio" name="q13" value="1"> B) Present habits</label>
+    <label><input type="radio" name="q13" value="2"> C) Future intentions</label>
+    <label><input type="radio" name="q13" value="3"> D) Continuous action</label>
+  </div>
+</div>
+
+<!-- 15 -->
+<div class="question" id="q14">
+  <div class="qtitle">15. Choose the correct translation: "When they made the switch, some had realized that office life didn’t match their ambitions."</div>
+  <div class="qtrans">15. Escolha a tradução correta:</div>
+  <div class="options">
+    <label><input type="radio" name="q14" value="0"> A) Quando eles fizeram a mudança, alguns já tinham percebido que a vida no escritório não combinava com suas ambições.</label>
+    <label><input type="radio" name="q14" value="1"> B) Eles mudaram de empresa por causa de ambições.</label>
+    <label><input type="radio" name="q14" value="2"> C) Quando mudaram, ninguém percebeu nada.</label>
+    <label><input type="radio" name="q14" value="3"> D) Eles combinaram mudar suas ambições.</label>
+  </div>
+</div>
+
+<!-- 16 -->
+<div class="question" id="q15">
+  <div class="qtitle">16. In "By 2030, traditional 9-to-5 jobs will have become less common." which tense is used?</div>
+  <div class="qtrans">16. Em "By 2030, traditional 9-to-5 jobs will have become less common." qual tempo verbal é usado?</div>
+  <div class="options">
+    <label><input type="radio" name="q15" value="0"> A) Future Perfect</label>
+    <label><input type="radio" name="q15" value="1"> B) Simple Future</label>
+    <label><input type="radio" name="q15" value="2"> C) Present Perfect</label>
+    <label><input type="radio" name="q15" value="3"> D) Past Perfect</label>
+  </div>
+</div>
+
+<!-- 17 -->
+<div class="question" id="q16">
+  <div class="qtitle">17. What does "will have completed" express in the Carlos example?</div>
+  <div class="qtrans">17. O que "will have completed" expressa no exemplo do Carlos?</div>
+  <div class="options">
+    <label><input type="radio" name="q16" value="0"> A) An action completed before a future time</label>
+    <label><input type="radio" name="q16" value="1"> B) A past habit</label>
+    <label><input type="radio" name="q16" value="2"> C) A present routine</label>
+    <label><input type="radio" name="q16" value="3"> D) A conditional action</label>
+  </div>
+</div>
+
+<!-- 18 -->
+<div class="question" id="q17">
+  <div class="qtitle">18. By the end of this week, Carlos will have completed 300 Uber rides. How many rides has he done so far?</div>
+  <div class="qtrans">18. Até o fim desta semana, Carlos terá completado 300 corridas de Uber. Quantas corridas ele fez até agora?</div>
+  <div class="options">
+    <label><input type="radio" name="q17" value="0"> A) More than 300</label>
+    <label><input type="radio" name="q17" value="1"> B) Less than 300</label>
+    <label><input type="radio" name="q17" value="2"> C) Exactly 300</label>
+    <label><input type="radio" name="q17" value="3"> D) None</label>
+  </div>
+</div>
+
+<!-- 19 -->
+<div class="question" id="q18">
+  <div class="qtitle">19. What does "manage your own taxes" mean?</div>
+  <div class="qtrans">19. O que significa "manage your own taxes"?</div>
+  <div class="options">
+    <label><input type="radio" name="q18" value="0"> A) Pay and control taxes by yourself</label>
+    <label><input type="radio" name="q18" value="1"> B) Avoid taxes</label>
+    <label><input type="radio" name="q18" value="2"> C) Depend on employer for taxes</label>
+    <label><input type="radio" name="q18" value="3"> D) Ignore taxes</label>
+  </div>
+</div>
+
+<!-- 20 -->
+<div class="question" id="q19">
+  <div class="qtitle">20. Which is a key challenge in gig work?</div>
+  <div class="qtrans">20. Qual é um desafio chave no trabalho por aplicativo?</div>
+  <div class="options">
+    <label><input type="radio" name="q19" value="0"> A) Stable income</label>
+    <label><input type="radio" name="q19" value="1"> B) Irregular / unstable income</label>
+    <label><input type="radio" name="q19" value="2"> C) Employer benefits</label>
+    <label><input type="radio" name="q19" value="3"> D) Unlimited vacation</label>
+  </div>
+</div>
+
+<!-- 21 -->
+<div class="question" id="q20">
+  <div class="qtitle">21. What should gig workers constantly do to stay competitive?</div>
+  <div class="qtrans">21. O que os trabalhadores por aplicativo devem fazer constantemente para se manter competitivos?</div>
+  <div class="options">
+    <label><input type="radio" name="q20" value="0"> A) Update their skills</label>
+    <label><input type="radio" name="q20" value="1"> B) Stop learning</label>
+    <label><input type="radio" name="q20" value="2"> C) Depend on past success</label>
+    <label><input type="radio" name="q20" value="3"> D) Change jobs daily</label>
+  </div>
+</div>
+
+<!-- 22 -->
+<div class="question" id="q21">
+  <div class="qtitle">22. The gig economy offers freedom but also:</div>
+  <div class="qtrans">22. A gig economy oferece liberdade mas também:</div>
+  <div class="options">
+    <label><input type="radio" name="q21" value="0"> A) Challenges</label>
+    <label><input type="radio" name="q21" value="1"> B) Guaranteed stability</label>
+    <label><input type="radio" name="q21" value="2"> C) Employer benefits</label>
+    <label><input type="radio" name="q21" value="3"> D) No responsibilities</label>
+  </div>
+</div>
+
+<!-- 23 -->
+<div class="question" id="q22">
+  <div class="qtitle">23. "To be worth" means:</div>
+  <div class="qtrans">23. "To be worth" significa:</div>
+  <div class="options">
+    <label><input type="radio" name="q22" value="0"> A) To be expensive</label>
+    <label><input type="radio" name="q22" value="1"> B) To be worthwhile / worth it</label>
+    <label><input type="radio" name="q22" value="2"> C) To be usual</label>
+    <label><input type="radio" name="q22" value="3"> D) To be free</label>
+  </div>
+</div>
+
+<!-- 24 -->
+<div class="question" id="q23">
+  <div class="qtitle">24. Which of these is NOT recommended in the text?</div>
+  <div class="qtrans">24. Qual destas NÃO é recomendada no texto?</div>
+  <div class="options">
+    <label><input type="radio" name="q23" value="0"> A) Develop skills</label>
+    <label><input type="radio" name="q23" value="1"> B) Save for retirement</label>
+    <label><input type="radio" name="q23" value="2"> C) Ignore taxes</label>
+    <label><input type="radio" name="q23" value="3"> D) Plan ahead</label>
+  </div>
+</div>
+
+<!-- 25 -->
+<div class="question" id="q24">
+  <div class="qtitle">25. "Irregular income" means:</div>
+  <div class="qtrans">25. "Irregular income" significa:</div>
+  <div class="options">
+    <label><input type="radio" name="q24" value="0"> A) Income that changes and is not steady</label>
+    <label><input type="radio" name="q24" value="1"> B) High fixed salary</label>
+    <label><input type="radio" name="q24" value="2"> C) Employer-provided pay</label>
+    <label><input type="radio" name="q24" value="3"> D) No income at all</label>
+  </div>
+</div>
+
+<!-- 26 -->
+<div class="question" id="q25">
+  <div class="qtitle">26. Which word in the text means "manage / control"?</div>
+  <div class="qtrans">26. Qual palavra do texto significa "manage / controlar"?</div>
+  <div class="options">
+    <label><input type="radio" name="q25" value="0"> A) Save</label>
+    <label><input type="radio" name="q25" value="1"> B) Manage</label>
+    <label><input type="radio" name="q25" value="2"> C) Allow</label>
+    <label><input type="radio" name="q25" value="3"> D) Seek</label>
+  </div>
+</div>
+
+<!-- 27 -->
+<div class="question" id="q26">
+  <div class="qtitle">27. Teenagers entering the workforce should:</div>
+  <div class="qtrans">27. Adolescentes que entram no mercado de trabalho devem:</div>
+  <div class="options">
+    <label><input type="radio" name="q26" value="0"> A) Understand both sides (pros and cons)</label>
+    <label><input type="radio" name="q26" value="1"> B) Only look for office jobs</label>
+    <label><input type="radio" name="q26" value="2"> C) Avoid planning</label>
+    <label><input type="radio" name="q26" value="3"> D) Rely on employers forever</label>
+  </div>
+</div>
+
+<!-- 28 -->
+<div class="question" id="q27">
+  <div class="qtitle">28. "By the end of the first year, few looked back" means:</div>
+  <div class="qtrans">28. "Ao final do primeiro ano, poucos olharam para trás" significa:</div>
+  <div class="options">
+    <label><input type="radio" name="q27" value="0"> A) Most did not regret their decision</label>
+    <label><input type="radio" name="q27" value="1"> B) Most returned to office jobs</label>
+    <label><input type="radio" name="q27" value="2"> C) Few saved money</label>
+    <label><input type="radio" name="q27" value="3"> D) Everyone quit</label>
+  </div>
+</div>
+
+<!-- 29 -->
+<div class="question" id="q28">
+  <div class="qtitle">29. To protect themselves financially, gig workers should:</div>
+  <div class="qtrans">29. Para se proteger financeiramente, trabalhadores por aplicativo devem:</div>
+  <div class="options">
+    <label><input type="radio" name="q28" value="0"> A) Save, manage taxes and plan</label>
+    <label><input type="radio" name="q28" value="1"> B) Spend all earnings</label>
+    <label><input type="radio" name="q28" value="2"> C) Ignore finances</label>
+    <label><input type="radio" name="q28" value="3"> D) Work less</label>
+  </div>
+</div>
+
+<!-- 30 -->
+<div class="question" id="q29">
+  <div class="qtitle">30. "Constantly upgrade your skills" means:</div>
+  <div class="qtrans">30. "Atualizar constantemente suas habilidades" significa:</div>
+  <div class="options">
+    <label><input type="radio" name="q29" value="0"> A) Keep learning and improving skills</label>
+    <label><input type="radio" name="q29" value="1"> B) Stop studying</label>
+    <label><input type="radio" name="q29" value="2"> C) Work without change</label>
+    <label><input type="radio" name="q29" value="3"> D) Teach others only</label>
+  </div>
+</div>
+
+    </form>
+
+    <div class="controls">
+      <button onclick="submitQuiz()">Enviar / Corrigir</button>
+      <button class="secondary" onclick="resetQuiz()" type="button">Resetar respostas</button>
+      <button class="download" id="downloadBtn" style="display:none" onclick="downloadCSV()">Baixar resultado (CSV)</button>
+      <div style="flex:1"></div>
+      <div class="small">As alternativas são somente em inglês. Tradução dos enunciados está abaixo de cada pergunta.</div>
+    </div>
+
+    <div id="resultArea" class="result" style="display:none"></div>
+  </div>
+
+  <footer>
+    <p>Produzido para uso em sala de aula — Escola Maria Zilda.</p>
+  </footer>
+</div>
+
+<script>
+// Gabarito: índice da alternativa correta (0-based) para q0..q29
+const answers = [
+  1, // q0
+  1, // q1
+  2, // q2
+  1, // q3
+  0, // q4
+  2, // q5
+  1, // q6
+  2, // q7
+  1, // q8
+  0, // q9
+  1, // q10
+  0, // q11
+  0, // q12
+  0, // q13
+  0, // q14
+  0, // q15
+  0, // q16
+  1, // q17
+  0, // q18
+  1, // q19
+  0, // q20
+  0, // q21
+  1, // q22
+  2, // q23 (ignore taxes is not recommended -> index 2)
+  0, // q24
+  1, // q25
+  0, // q26
+  0, // q27
+  0, // q28
+  0  // q29
+];
+
+function submitQuiz(){
+  const name = document.getElementById('studentName').value.trim();
+  if(!name){ alert('Por favor, digite seu nome completo. / Please enter your full name.'); return; }
+
+  let score = 0;
+  const total = answers.length;
+  const detail = [];
+
+  for(let i=0;i<total;i++){
+    const opts = document.getElementsByName('q'+i);
+    let selected = null;
+    for(let j=0;j<opts.length;j++){
+      if(opts[j].checked){ selected = parseInt(opts[j].value); break; }
+    }
+    const correct = answers[i];
+    const correctLabel = String.fromCharCode(65 + correct);
+    detail.push({ q:i+1, selected: selected, correct: correct });
+
+    // highlight options
+    const qDiv = document.getElementById('q'+i);
+    const labels = qDiv.querySelectorAll('.options label');
+    labels.forEach((lab, idx) => {
+      lab.classList.remove('correct','wrong');
+      // find input inside label
+      const inp = lab.querySelector('input');
+      if(idx === correct){
+        lab.classList.add('correct');
+      }
+      if(selected !== null && idx === selected && idx !== correct){
+        lab.classList.add('wrong');
+      }
+    });
+
+    if(selected !== null && selected === correct) score++;
+  }
+
+  const percent = Math.round(score/total*100);
+  const resultArea = document.getElementById('resultArea');
+  resultArea.style.display = 'block';
+  resultArea.innerHTML = `<div style="font-weight:800;color:var(--accent)">Parabéns, ${escapeHtml(name)}!</div>
+    <div style="margin-top:8px">Você acertou <strong>${score}</strong> de <strong>${total}</strong> questões — <strong>${percent}%</strong>.</div>
+    <div style="margin-top:10px;font-size:13px;color:var(--muted)">As respostas corretas estão em verde; se você marcou uma opção errada, sua escolha aparece em vermelho.</div>`;
+
+  // save result for CSV
+  const resultObj = { name: name, score: score, total: total, percent: percent, timestamp: new Date().toISOString() };
+  window.latestResult = resultObj;
+  document.getElementById('downloadBtn').style.display = 'inline-block';
+  // scroll to result
+  resultArea.scrollIntoView({behavior:'smooth'});
+}
+
+function resetQuiz(){
+  if(!confirm('Deseja limpar todas as respostas? / Do you want to clear all answers?')) return;
+  const total = answers.length;
+  for(let i=0;i<total;i++){
+    const opts = document.getElementsByName('q'+i);
+    opts.forEach(o => o.checked = false);
+    const qDiv = document.getElementById('q'+i);
+    const labels = qDiv.querySelectorAll('.options label');
+    labels.forEach(l => { l.classList.remove('correct','wrong'); });
+  }
+  document.getElementById('resultArea').style.display = 'none';
+  document.getElementById('downloadBtn').style.display = 'none';
+  window.latestResult = null;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function escapeCsv(val){
+  if(val === null || val === undefined) return '';
+  return '"'+String(val).replace(/"/g,'""')+'"';
+}
+
+function downloadCSV(){
+  if(!window.latestResult){ alert('Nenhum resultado para baixar. Envie o quiz primeiro.'); return; }
+  const r = window.latestResult;
+  const header = ['name','score','total','percent','timestamp'];
+  const row = [r.name, r.score, r.total, r.percent, r.timestamp];
+  const csv = header.join(',') + '\n' + row.map(escapeCsv).join(',');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  const safeName = r.name.replace(/\s+/g,'_').replace(/[^a-zA-Z0-9_]/g,'');
+  a.download = `quiz_result_${safeName}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// small helper to escape HTML
+function escapeHtml(text){
+  return String(text).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+</script>
+</body>
+</html>
